@@ -29,8 +29,10 @@ module.exports = {
       borderColor: {
         base: {
           white: '#FFF',
-          gradation: 'linear-gradient(180deg, #4E01F0 0%, #FF00B7 100%)',
         },
+      },
+      borderImage: {
+        default: 'linear-gradient(180deg, #4E01F0 0%, #FF00B7 100%)',
       },
     },
   },

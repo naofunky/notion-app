@@ -5,7 +5,7 @@ import { NewType } from '../types/NewType';
 
 const Layout: NewType = ({ children }) => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-base-black">
       <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
         {/*  */}
         <Navbar />

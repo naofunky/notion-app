@@ -11,7 +11,7 @@ const Card: FC<sampleTypes> = ({ page }) => {
       href={`/articles/${getText(page.properties.slug.rich_text)}`}
       className="flex justify-center"
     >
-      <div className="max-w-sm rounded overflow-hidden shadow-lg w-full my-4 md:my-0 content-between grid transition-all hover:scale-105">
+      <div className="text-center max-w-sm rounded overflow-hidden shadow-lg w-full my-4 md:my-0 content-between grid transition-all hover:scale-105 border-2 p-2 border-default border-image">
         {/* image */}
         <div>
           {' '}
@@ -29,12 +29,12 @@ const Card: FC<sampleTypes> = ({ page }) => {
 
         {/* title & date*/}
         <div className="px-6 pt-4">
-          <h2 className="text-base font-medium mb-3">
+          <h2 className="text-base-white font-medium mb-3">
             {getText(page.properties.Name.title)}
           </h2>
-          <p className="text-gray-700 text-xs">
+          {/* <p className="text-base-white text-xs">
             {getDate(page.properties.published.date)}
-          </p>
+          </p> */}
         </div>
 
         {/* tag */}
@@ -43,9 +43,9 @@ const Card: FC<sampleTypes> = ({ page }) => {
             (tag, index) => (
               <span
                 key={index}
-                className="text-sm px-2 py-1 font-normal bg-gray-200 rounded-lg break-words mr-2 mb-2"
+                className="text-sm px-2 py-1 font-normal rounded-lg break-words text-base-white"
               >
-                {`#${tag}`}
+                {`[ #${tag} ]`}
               </span>
             )
           )}
