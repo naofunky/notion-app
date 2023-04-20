@@ -26,6 +26,9 @@ module.exports = {
           white: '#FFF',
         },
       },
+      borderRadius: {
+        30: '30px',
+      },
       borderColor: {
         base: {
           white: '#FFF',
