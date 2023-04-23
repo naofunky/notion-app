@@ -12,7 +12,7 @@ const Card: FC<sampleTypes> = ({ page }) => {
         href={`/articles/${getText(page.properties.slug.rich_text)}`}
         className="flex justify-center"
       >
-        <div className="text-center max-w-sm overflow-hidden shadow-lg w-full my-4 md:my-0 content-between grid  border-2 p-2 border-default border-image rounded-30">
+        <div className="border-2 border-solid border-gradation text-center max-w-sm overflow-hidden shadow-lg w-full my-4 md:my-0 content-between grid p-2 rounded-30">
           {/* image */}
           <div>
             {' '}

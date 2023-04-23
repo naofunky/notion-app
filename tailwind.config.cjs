@@ -13,12 +13,18 @@ module.exports = {
         detail2: ['16px', { fontWeight: '700', lineHeight: '1.5' }],
         detail2: ['14px', { fontWeight: '400', lineHeight: '1.5' }],
       },
+      colors: {
+        black: '#000',
+        white: '#E1E1E1',
+        purple: '#4E01F0',
+        pink: '#FF00B7',
+      },
       backgroundColor: {
         base: {
           black: '#000',
           white: '#E1E1E1',
-          gradation:
-            'linear-gradient(180deg, #4E01F0 0%, rgba(96, 100, 251, 0) 100%)',
+          purple: '#4E01F0',
+          pink: '#FF00B7',
         },
       },
       textColor: {
@@ -30,13 +36,16 @@ module.exports = {
         30: '30px',
       },
       borderColor: {
-        base: {
-          white: '#FFF',
-        },
+        white: '#FFF',
       },
-      borderImage: {
-        default: 'linear-gradient(180deg, #4E01F0 0%, #FF00B7 100%)',
+      borderStyle: {
+        solid: 'solid',
       },
+      borderImage: (theme) => ({
+        gradation: `linear-gradient(to bottom, ${theme(
+          'colors.purple'
+        )}, ${theme('colors.pink')})`,
+      }),
     },
   },
   plugins: [],
