@@ -35,9 +35,12 @@ module.exports = {
       borderRadius: {
         30: '30px',
       },
-      borderColor: {
-        white: '#FFF',
-      },
+      borderColor: (theme) => ({
+        DEFAULT: theme('colors.gray.300', 'currentColor'),
+        primary: '#3490dc',
+        secondary: '#ffed4a',
+        danger: '#e3342f',
+      }),
       borderStyle: {
         solid: 'solid',
       },
