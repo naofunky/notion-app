@@ -25,6 +25,7 @@ module.exports = {
           white: '#E1E1E1',
           purple: '#4E01F0',
           pink: '#FF00B7',
+          mask: 'rgba(0, 0, 0, 0.4)',
         },
       },
       textColor: {
