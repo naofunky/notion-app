@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        'content-width-pc-small': '820px',
+        'content-width-pc-medium': '1058px',
+      },
+      maxWidth: {
+        mdd: '66.125rem',
+        smm: '51.25rem',
+      },
       fontSize: {
         h1: ['56px', { fontWeight: '700', lineHeight: '1.5' }],
         top2: ['20px', { fontWeight: '700', lineHeight: '1.5' }],
@@ -41,15 +49,17 @@ module.exports = {
         primary: '#3490dc',
         secondary: '#ffed4a',
         danger: '#e3342f',
+        white: '#FFF',
       }),
       borderStyle: {
         solid: 'solid',
       },
-      borderImage: (theme) => ({
-        gradation: `linear-gradient(to bottom, ${theme(
-          'colors.purple'
-        )}, ${theme('colors.pink')})`,
-      }),
+      grayscale: {
+        30: '30%',
+        50: '50%',
+        60: '60%',
+        100: '100%',
+      },
     },
   },
   plugins: [],

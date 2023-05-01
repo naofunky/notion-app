@@ -10,14 +10,17 @@ const Card: FC<sampleTypes> = ({ page }) => {
     <div className="text-center">
       <Link
         href={`/articles/${getText(page.properties.slug.rich_text)}`}
-        className="flex justify-center items-center"
+        className="flex justify-center items-center relative"
       >
-        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[370px] h-[370px] my-4 md:my-0 content-between flex justify-center items-center rounded-30 hover:bg-black hover:bg-opacity-40">
+        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[370px] h-[370px] my-4 md:my-0 content-between flex justify-center items-center rounded-30">
           {/* image */}
-          <div className="bg-black w-[367px] h-[367px] flex justify-center items-center rounded-30">
+          <div
+            className="bg-black w-[367px] h-[367px] flex justify-center items-center rounded-30 view-more-text hover:grayscale-60 duration-300 delay-150"
+            data-text="View more"
+          >
             {' '}
             <Image
-              className="static w-full h-full rounded-30"
+              className="w-full h-full rounded-30"
               src={getCover(page.cover)}
               alt=""
               object-fit={'cover'}

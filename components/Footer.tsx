@@ -3,14 +3,14 @@ import siteConfig from 'site.config';
 
 const Footer = () => {
   return (
-    <footer className="text-center bg-gray-900 text-white w-screen block">
-      <div className="container px-6 pt-6 flex flex-col items-center max-w-2xl w-full mx-auto">
-        <div className="flex justify-center mb-6 text-white">
+    <footer className="text-center w-screen block border-t border-solid border-white max-w-mdd border-opacity-50">
+      <div className="container px-6 pt-11 flex flex-col items-center max-w-2xl w-full mx-auto">
+        <div className="flex justify-center mb-28 text-white">
           {/* Twitter */}
           {siteConfig.twitterUrl && (
             <a
               href={siteConfig.twitterUrl}
-              className="hover:opacity-60 transition ease-in-out delay-150"
+              className="opacity-50 hover:opacity-100 transition ease-in-out delay-150 duration-300"
             >
               <svg
                 aria-hidden="true"
@@ -58,7 +58,7 @@ const Footer = () => {
           {siteConfig.githubUrl && (
             <a
               href={siteConfig.githubUrl}
-              className="hover:opacity-60 transition ease-in-out delay-150"
+              className="opacity-50 hover:opacity-100 transition ease-in-out delay-150 duration-300"
             >
               <svg
                 aria-hidden="true"
@@ -77,12 +77,6 @@ const Footer = () => {
               </svg>
             </a>
           )}
-        </div>
-        {/* copyright */}
-        <div className="text-center p-4 ">
-          <Link href="/" className="text-whitehite">
-            © {siteConfig.title}
-          </Link>
         </div>
       </div>
     </footer>
