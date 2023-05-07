@@ -12,10 +12,10 @@ const Card: FC<sampleTypes> = ({ page }) => {
         href={`/articles/${getText(page.properties.slug.rich_text)}`}
         className="flex justify-center items-center relative"
       >
-        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[370px] h-[370px] my-4 md:my-0 content-between flex justify-center items-center rounded-30">
+        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[350px] h-[350px] my-4 md:my-0 content-between flex justify-center items-center rounded-30 md:w-[370px] md:h-[370px]">
           {/* image */}
           <div
-            className="bg-black w-[367px] h-[367px] flex justify-center items-center rounded-30 view-more-text hover:grayscale-60 duration-300 delay-150"
+            className="relative bg-black w-[347px] h-[347px] flex justify-center items-center rounded-30 view-more-text hover:grayscale-100 duration-300 delay-150 md:w-[367px] md:h-[367px]"
             data-text="View more"
           >
             {' '}
@@ -44,6 +44,7 @@ const Card: FC<sampleTypes> = ({ page }) => {
 
       {/* tag */}
       <div className="px-6 pb-4">
+        {' '}
         {getMultiSelected(page.properties.tags.multi_select).map(
           (tag, index) => (
             <span

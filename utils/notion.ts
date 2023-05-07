@@ -87,3 +87,8 @@ export const fetchBlocksPageId = async (pageId: string) => {
   }
   return { results: data };
 };
+
+// export const fourPageContents = async (page: any) => {
+//   const allContents = await fetchPages(page);
+
+// }

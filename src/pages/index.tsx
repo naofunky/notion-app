@@ -30,7 +30,7 @@ const Home: NextPage<IndexProps> = ({ pages }) => {
           <h1 className="text-5xl mb-[32px] text-center text-base-white">
             {siteConfig.title}
           </h1>
-          <div className="grid gap-[5rem] mt-[40px] grid-cols-2 w-[100%] my-[3rem]">
+          <div className="block gap-[5rem] mt-[40px] grid-cols-2 w-[100%] my-[3rem] md:grid">
             {/* Card */}
             {pages.map((page, index) => (
               <Card key={index} page={page} />

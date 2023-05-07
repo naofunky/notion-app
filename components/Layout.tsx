@@ -10,7 +10,7 @@ const Layout: NewType = ({ children }) => {
         {/*  */}
         <Navbar />
         {/*  */}
-        <main className="w-full pb-12 px-4">{children}</main>
+        <main className="w-full pb-12 px-[15px] md:px-4">{children}</main>
         {/*  */}
         <Footer />
       </div>
