@@ -15,20 +15,22 @@ const Card: FC<sampleTypes> = ({ page }) => {
         <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[350px] h-[350px] my-4 md:my-0 content-between flex justify-center items-center rounded-30 md:w-[370px] md:h-[370px]">
           {/* image */}
           <div
-            className="relative bg-black w-[347px] h-[347px] flex justify-center items-center rounded-30 view-more-text hover:grayscale-100 duration-300 delay-150 md:w-[367px] md:h-[367px]"
+            className="relative bg-black w-[347px] h-[347px] flex justify-center items-center rounded-30 view-more-text z-50 duration-300 delay-150 md:w-[367px] md:h-[367px]"
             data-text="View more"
           >
-            {' '}
-            <Image
-              className="w-full h-full rounded-30"
-              src={getCover(page.cover)}
-              alt=""
-              object-fit={'cover'}
-              style={{ objectFit: 'cover' }}
-              width={322}
-              height={322}
-              quality={30}
-            />
+            <div className="relative w-[322px] h-[322px] black-mask-40">
+              {' '}
+              <Image
+                className="w-full h-full rounded-30"
+                src={getCover(page.cover)}
+                alt=""
+                object-fit={'cover'}
+                style={{ objectFit: 'cover' }}
+                width={322}
+                height={322}
+                quality={30}
+              />
+            </div>
           </div>
         </div>
       </Link>
