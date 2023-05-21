@@ -12,13 +12,13 @@ const Card: FC<sampleTypes> = ({ page }) => {
         href={`/articles/${getText(page.properties.slug.rich_text)}`}
         className="flex justify-center items-center relative"
       >
-        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[350px] h-[350px] my-4 md:my-0 content-between flex justify-center items-center rounded-30 md:w-[370px] md:h-[370px]">
+        <div className="bg-gradient-to-t from-[#FF00B7] to-[#4E01F0] text-center overflow-hidden shadow-lg w-[350px] h-[350px] my-4 md:my-0 content-between flex justify-center items-center rounded-30 md:w-[370px] md:h-[370px] black-mask-40">
           {/* image */}
           <div
             className="relative bg-black w-[347px] h-[347px] flex justify-center items-center rounded-30 view-more-text z-50 duration-300 delay-150 md:w-[367px] md:h-[367px]"
             data-text="View more"
           >
-            <div className="relative w-[322px] h-[322px] black-mask-40">
+            <div className="relative w-[322px] h-[322px]">
               {' '}
               <Image
                 className="w-full h-full rounded-30"
