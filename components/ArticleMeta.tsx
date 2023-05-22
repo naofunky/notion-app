@@ -11,6 +11,10 @@ import Link from 'next/link';
 const ArticleMeta = ({ page }: ArticleMetaProps) => {
   return (
     <>
+      {/* page name */}
+      <h1 className="my-8 text-base-white">
+        {getText(page.properties.Name.title)}
+      </h1>
       {/* page cover */}
       <Image
         className="w-full max-w-screen-lg rounded-lg aspect-video my-4 "
@@ -23,24 +27,22 @@ const ArticleMeta = ({ page }: ArticleMetaProps) => {
         quality={50}
       />
 
-      {/* page name */}
-      <h1 className="my-8">{getText(page.properties.Name.title)}</h1>
-      <div className="bg-gray-100 px-6 py-4 rounded text-sm text-gray-500">
-        <div className="grid grid-cols-3 gap-4">
+      <div className="px-6 py-4 rounded text-sm text-base-white">
+        <div className="flex flex-wrap">
           {/* published */}
-          <div className="col-span-1">Published</div>
+          <div className="mr-5">Published</div>
           <div className="col-span-2">
             {getDate(page.properties.published.date)}
           </div>
 
           {/* author */}
-          <div className="col-span-1">Author</div>
+          <div className="mr-5">Author</div>
           <div className="col-span-2">
             {getText(page.properties.author.rich_text)}
           </div>
 
           {/* tags */}
-          <div className="col-span-1">Tags</div>
+          <div className="mr-5">Tags</div>
           <div className="col-span-2">
             {/* change later */}
             {getMultiSelected(page.properties.tags.multi_select).map(
@@ -48,7 +50,7 @@ const ArticleMeta = ({ page }: ArticleMetaProps) => {
                 <Link
                   key={index}
                   href={`/tags/${tag}`}
-                  className="text-gray-700 no-underline border-b border-solid border-gray-700 opacity-70 mr-3"
+                  className="text-base-white border-b border-solid border-white mr-3"
                 >
                   <span>{`#${tag}`}</span>
                 </Link>
