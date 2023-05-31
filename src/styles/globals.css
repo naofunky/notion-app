@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 h1 {
-  @apply font-semibold leading-tight text-4xl mt-0 mb-2;
+  @apply font-semibold leading-tight text-4xl mt-0 mb-2 text-base-white;
 }
 h2 {
-  @apply font-semibold leading-tight text-3xl mt-0 mb-2;
+  @apply font-semibold leading-tight text-3xl mt-0 mb-2 text-base-white;
 }
 h3 {
-  @apply font-semibold leading-tight text-2xl mt-0 mb-2;
+  @apply font-semibold leading-tight text-2xl mt-0 mb-2 text-base-white;
 }
 p {
-  @apply font-light leading-relaxed text-base text-gray-800 mt-0 mb-4;
+  @apply font-light leading-relaxed text-base mt-0 mb-4 text-base-white;
 }
 main {
   @apply min-h-screen flex flex-col justify-center items-center;
@@ -24,8 +24,12 @@ main {
   }
 }
 
+.nbr-block-p {
+  @apply text-base-white;
+}
+
 .nbr-inline-code {
-  @apply text-pink-500 text-sm px-2 py-1 font-normal bg-gray-100 rounded break-words;
+  @apply text-pink-500 text-sm px-2 py-1 font-normal rounded break-words bg-slate-400;
 }
 .nbr-caption {
   @apply text-inherit opacity-70;
@@ -37,7 +41,7 @@ main {
   @apply border-l-4 border-solid border-gray-700 px-4 py-2;
 }
 .nbr-block-code {
-  @apply text-sm;
+  @apply text-sm bg-base-white;
 }
 /* Hide only scrollbar */
 .nbr-block-code pre::-webkit-scrollbar {
@@ -46,6 +50,7 @@ main {
 .nbr-block-code .syntax-highlighter-pre {
   @apply rounded-lg;
   @apply p-5 !important;
+  @apply bg-slate-400;
 }
 .nbr-block-callout {
   @apply bg-gray-100 pr-6 py-5 pl-4 rounded flex;
@@ -59,10 +64,10 @@ main {
   margin-inline-start: 8px;
 }
 .nbr-block-ul {
-  @apply pl-4 list-disc;
+  @apply pl-4 list-disc text-base-white;
 }
 .nbr-block-ol {
-  @apply pl-4 list-decimal;
+  @apply pl-4 list-decimal text-base-white;
 }
 /* Add margin-bottom for each block */
 .nbr-blocks > div {

@@ -31,13 +31,13 @@ const ArticleMeta = ({ page }: ArticleMetaProps) => {
         <div className="flex flex-wrap">
           {/* published */}
           <div className="mr-5">Published</div>
-          <div className="col-span-2">
+          <div className="col-span-2 mr-10">
             {getDate(page.properties.published.date)}
           </div>
 
           {/* author */}
           <div className="mr-5">Author</div>
-          <div className="col-span-2">
+          <div className="col-span-2 mr-10">
             {getText(page.properties.author.rich_text)}
           </div>
 
