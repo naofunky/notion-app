@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async (parameterText) => {
 const Article = ({ page, blocks }: ArticleProps) => {
   return (
     <Layout>
-      <article>
+      <article className="max-w-5xl">
         {/* meta section */}
         <div className="my-12">
           <ArticleMeta page={page} />
