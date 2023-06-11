@@ -3,19 +3,20 @@ import Card from '../../../components/Card';
 import Layout from '../../../components/Layout';
 import { fetchPages } from '../../../utils/notion';
 import { Params, TagProps } from '../../../types/types';
-import { getMultiSelected } from 'utils/property';
+import { getMultiSelected } from '../../../utils/property';
 import { Set } from 'typescript';
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export async function getStaticPaths() {
   const { results }: { results: Record<string, any>[] } = await fetchPages({});
 
-  const pathSet: Set<string> = new Set();
+  const pathSet: any = new Set();
   for (const page of results) {
     for (const tag of getMultiSelected(page.properties.tags.multi_select)) {
       pathSet.add(tag);
     }
   }
 
+  // オブジェクトから配列に変換
   const paths = Array.from(pathSet).map((tag) => {
     return {
       params: {
@@ -28,7 +29,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: paths,
     fallback: 'blocking',
   };
-};
+}
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { tag } = ctx.params as Params;
